@@ -3,7 +3,11 @@ package com.rujirakongsomran.coverflowitemclick;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.TextSwitcher;
+import android.widget.TextView;
+import android.widget.ViewSwitcher;
 
 import com.rujirakongsomran.coverflowitemclick.Adapter.MovieAdapter;
 import com.rujirakongsomran.coverflowitemclick.Common.Common;
@@ -25,7 +29,27 @@ public class MainActivity extends AppCompatActivity {
         initData();
         adapter = new MovieAdapter(Common.movieList, this);
         coverFlow = (FeatureCoverFlow) findViewById(R.id.coverFlow);
+        mTitle = (TextSwitcher) findViewById(R.id.tsTitle);
+        mTitle.setFactory(new ViewSwitcher.ViewFactory() {
+            @Override
+            public View makeView() {
+                LayoutInflater inflater = LayoutInflater.from(MainActivity.this);
+                TextView text = (TextView) inflater.inflate(R.layout.layout_title, null);
+                return text;
+            }
+        });
         coverFlow.setAdapter(adapter);
+        coverFlow.setOnScrollPositionListener(new FeatureCoverFlow.OnScrollPositionListener() {
+            @Override
+            public void onScrolledToPosition(int position) {
+                mTitle.setText(Common.movieList.get(position).getTitle());
+            }
+
+            @Override
+            public void onScrolling() {
+
+            }
+        });
     }
 
     private void initData() {
