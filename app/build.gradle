@@ -30,4 +30,18 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    // Cover Flow
+    implementation 'com.github.moondroid.coverflow:library:1.0'
+
+    // Kenburns View (for animate image)
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+
+    // Diagonal Layout (for style detail movie layout)
+    implementation 'com.github.florent37:diagonallayout:1.0.7'
+
+    // Picasso (for load image form internet)
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // CardView
+    implementation "androidx.cardview:cardview:1.0.0"
 }
