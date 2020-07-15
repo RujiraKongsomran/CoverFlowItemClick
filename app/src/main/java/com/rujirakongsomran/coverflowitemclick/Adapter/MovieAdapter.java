@@ -41,13 +41,17 @@ public class MovieAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        LayoutInflater inflater = LayoutInflater.from(context);
-        View itemView = inflater.inflate(R.layout.layout_item, null);
-        TextView tvLabel = (TextView) itemView.findViewById(R.id.tvLabel);
-        ImageView ivPic = (ImageView) itemView.findViewById(R.id.ivPic);
+        View rootView = view;
+        if (rootView == null) {
+            LayoutInflater inflater = LayoutInflater.from(context);
+            View itemView = inflater.inflate(R.layout.layout_item, null);
+            TextView tvLabel = (TextView) itemView.findViewById(R.id.tvLabel);
+            ImageView ivPic = (ImageView) itemView.findViewById(R.id.ivPic);
 
-        Picasso.get().load(movieList.get(i).getUrl()).into(ivPic);
-        tvLabel.setText(movieList.get(i).getTitle());
-        return itemView;
+            Picasso.get().load(movieList.get(i).getUrl()).into(ivPic);
+            tvLabel.setText(movieList.get(i).getTitle());
+            return itemView;
+        }
+        return rootView;
     }
 }

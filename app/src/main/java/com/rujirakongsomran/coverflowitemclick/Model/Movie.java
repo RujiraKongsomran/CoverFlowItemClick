@@ -3,7 +3,7 @@ package com.rujirakongsomran.coverflowitemclick.Model;
 public class Movie {
     public String title, summary, url;
 
-    public Movie(String title, String summary, String url) {
+    public Movie(String title, String url, String summary) {
         this.title = title;
         this.summary = summary;
         this.url = url;
