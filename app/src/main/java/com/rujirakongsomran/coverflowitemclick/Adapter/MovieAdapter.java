@@ -5,9 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.rujirakongsomran.coverflowitemclick.Model.Movie;
 import com.rujirakongsomran.coverflowitemclick.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -28,7 +31,7 @@ public class MovieAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int i) {
-        movieList.get(i);
+        return movieList.get(i);
     }
 
     @Override
@@ -39,7 +42,12 @@ public class MovieAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.)
-        return null;
+        View itemView = inflater.inflate(R.layout.layout_item, null);
+        TextView tvLabel = (TextView) itemView.findViewById(R.id.tvLabel);
+        ImageView ivPic = (ImageView) itemView.findViewById(R.id.ivPic);
+
+        Picasso.get().load(movieList.get(i).getUrl()).into(ivPic);
+        tvLabel.setText(movieList.get(i).getTitle());
+        return itemView;
     }
 }
