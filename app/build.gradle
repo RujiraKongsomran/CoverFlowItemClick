@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 30
@@ -44,4 +45,7 @@ dependencies {
 
     // CardView
     implementation "androidx.cardview:cardview:1.0.0"
+
+    // add the Firebase SDK for Google Analytics
+    implementation 'com.google.firebase:firebase-analytics:17.4.4'
 }

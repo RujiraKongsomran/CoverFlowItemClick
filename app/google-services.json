@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "316751587790",
+    "firebase_url": "https://coverflowitemclick.firebaseio.com",
+    "project_id": "coverflowitemclick",
+    "storage_bucket": "coverflowitemclick.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316751587790:android:780138993446818451a39f",
+        "android_client_info": {
+          "package_name": "com.rujirakongsomran.coverflowitemclick"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316751587790-c68j1p8fhl87bna54dav4t8he1m48d3l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rujirakongsomran.coverflowitemclick",
+            "certificate_hash": "ab7961a6bc2a018e99a8ce1b230074be85362154"
+          }
+        },
+        {
+          "client_id": "316751587790-5kqnc6k7go5jm3l6au3p3se5iv9amst2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1HJJ4s3rRpwSeMKEjNhvXVNIt-VY9C6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316751587790-5kqnc6k7go5jm3l6au3p3se5iv9amst2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
